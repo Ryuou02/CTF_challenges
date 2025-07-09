@@ -18,3 +18,6 @@ These are a set of CTF challenges, I made for various competitions hosted with m
 
 
 **If you are familiar with docker, you can directly download the images from [here](https://hub.docker.com/u/ryuou02)**
+
+## Note - 
+1. **Get The Credit Card!** is made such that each user has the feel of having an independant instance, even though all players have access to the same instance.

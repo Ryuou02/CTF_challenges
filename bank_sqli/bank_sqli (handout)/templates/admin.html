@@ -1,0 +1,52 @@
+<h1>welcome admin</h1>
+<table>
+    <tr>
+        <th>
+            id
+        </th>
+        <th>
+            username
+        </th>
+        <th>
+            money
+        </th>
+    </tr>
+{% for x in r %}
+<tr>
+    <td>
+        {{ x[0] }}
+    </td>
+    <td>
+        {{ x[1] }}
+    </td>
+    <td>
+        {{ x[3] }}
+    </td>
+</tr>
+{% endfor %}
+</table>
+<h2>change money for users: </h2>
+<table>
+    <form method="POST">
+        <tr>
+            <td>
+            username:
+            </td>
+            <td>
+                <input type="text" name="username">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                money:
+            </td>
+            <td>
+                <input type="text" name="money">
+            </td>
+        </tr><tr>
+            <td>
+        <button type="submit">submit</button>
+    </td>
+        </tr>
+    </form>
+</table>

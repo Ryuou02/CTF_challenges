@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banking</title>
+</head>
+<body class="bg-black">
+    <script src="https://cdn.tailwindcss.com"></script>
+<nav class="flex gap-5 justify-between items-center px-9 py-5 w-full text-lg leading-7 bg-zinc-900 border border-solid border-neutral-800 max-w-[1596px] rounded-[100px] max-md:flex-wrap max-md:px-5 max-md:max-w-full">
+    <img loading="lazy" src="/static/imgs/0.svg" alt="" class="shrink-0 self-stretch my-auto max-w-full aspect-[3.85] w-[156px]" />
+    <div class="flex gap-5 justify-between items-center self-stretch my-auto text-white whitespace-nowrap">
+        <button class="grow justify-center self-stretch px-6 py-3 bg-neutral-800 rounded-[82px] max-md:px-5 text-white" tabindex="0">Home</button>
+        <button class="self-stretch my-auto text-white" tabindex="0">Careers</button>
+        <button class="self-stretch my-auto text-white" tabindex="0">About</button>
+        <button class="grow self-stretch my-auto text-white" tabindex="0">Security</button>
+    </div>
+    {% if user == "": %}
+    <div class="flex gap-5 justify-between self-stretch">
+        <a href="/login"> <button class="grow justify-center px-8 py-3.5 whitespace-nowrap bg-lime-400 rounded-[82px] text-zinc-900 max-md:px-5">Login</button></a> 
+    
+    {% else %}
+    {{ user }}
+    </div>
+    {% endif %}
+</nav>
+<div
+  class="flex justify-center items-center self-stretch px-16 py-20 mt-14 w-full max-md:px-5 max-md:mt-10 max-md:max-w-full"
+>
+  <div class="my-5 w-full max-w-[1648px] max-md:max-w-full">
+    <div class="flex gap-5 max-md:flex-col max-md:gap-0">
+      <div class="flex flex-col w-[55%] max-md:ml-0 max-md:w-full">
+        <div
+          class="flex flex-col text-lg font-light max-md:mt-10 max-md:max-w-full"
+        >
+          <div
+            class="flex gap-1.5 self-start px-3 py-2.5 text-white whitespace-nowrap bg-neutral-800 leading-[133%] rounded-[61px]"
+          >
+            <img
+              loading="lazy"
+              src="/static/imgs/1.svg"
+              class="shrink-0 w-6 aspect-square"
+            />
+            <div class="flex-auto">No LLC Required, No Credit Check.</div>
+          </div>
+          <div
+            class="mt-5 text-5xl font-medium text-lime-400 leading-[72px] max-md:max-w-full max-md:text-4xl max-md:leading-[67px]"
+          >
+            <span class="text-white">Welcome to YourBank</span>
+            <br />
+            <span class="text-white">Empowering Your</span>
+            Financial Journey<br>
+            {% if user != "": %}
+            {{ money }}
+            {% endif %}
+          </div>
+          <div class="mt-3.5 leading-7 text-zinc-200 max-md:max-w-full">
+            At YourBank, our mission is to provide comprehensive banking
+            solutions that empower individuals and businesses to achieve their
+            financial goals. We are committed to delivering personalized and
+            innovative services that prioritize our customers' needs.<br>
+            {{ msg }}
+          </div>
+        </div>
+      </div>
+      <div class="flex flex-col ml-5 w-[45%] max-md:ml-0 max-md:w-full">
+        <img
+          loading="lazy"
+          srcset="{{src}}"
+          class="grow w-full rounded-xl border border-solid aspect-[1.12] border-neutral-800 max-md:mt-10 max-md:max-w-full"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+<div
+  class="flex gap-5 justify-between mt-36 w-full max-w-[1596px] max-md:flex-wrap max-md:mt-10 max-md:max-w-full"
+>
+  <div class="flex flex-col flex-1 px-5 max-md:max-w-full">
+    <div
+      class="text-5xl font-medium text-lime-400 leading-[72px] max-md:max-w-full max-md:text-4xl"
+    >
+      Our
+      <span class="text-lime-400">Products</span>
+    </div>
+    <div
+      class="mt-3.5 text-lg font-light leading-7 text-zinc-400 max-md:max-w-full"
+    >
+      Discover a range of comprehensive and customizable banking products at
+      YourBank, designed to suit your unique financial needs and aspirations
+    </div>
+  </div>
+  <div
+    class="flex gap-5 justify-between self-end p-3.5 mt-14 text-lg leading-7 text-center whitespace-nowrap border border-solid bg-zinc-900 border-neutral-800 rounded-[82px] max-md:mt-10"
+  >
+    <div
+      class="grow justify-center px-6 py-3.5 bg-lime-400 rounded-[140px] text-zinc-900 max-md:px-5"
+    >
+      For Individuals
+    </div>
+    <div class="grow my-auto text-white">For Businesses</div>
+  </div>
+</div>
+<div class="px-5 mt-24 w-full max-w-[1596px] max-md:mt-10 max-md:max-w-full">
+    <div class="flex gap-5 max-md:flex-col max-md:gap-0">
+      <div class="flex flex-col w-[33%] max-md:ml-0 max-md:w-full">
+        <div class="flex flex-col max-md:mt-10 max-md:max-w-full">
+          <div
+            class="flex flex-col justify-center items-center self-center px-3 h-[98px] rounded-[70px] w-[98px]"
+          >
+            <div
+              class="flex justify-center items-center px-5 w-full border border-lime-400 border-solid h-[74px] rounded-[50px]"
+            >
+              <img
+                loading="lazy"
+                src="/static/imgs/3.svg"
+                class="aspect-square w-[34px]"
+              />
+            </div>
+          </div>
+          <div
+            class="mt-8 text-2xl leading-9 text-center text-white max-md:max-w-full"
+          >
+            Checking Accounts
+          </div>
+          <div
+            class="mt-5 text-lg font-light leading-7 text-center text-zinc-400 max-md:max-w-full"
+          >
+            Enjoy easy and convenient access to your funds with our range of
+            checking account options. Benefit from features such as online and
+            mobile banking, debit cards, and free ATM access.
+          </div>
+        </div>
+      </div>
+      <div class="flex flex-col ml-5 w-[33%] max-md:ml-0 max-md:w-full">
+        <div class="flex flex-col max-md:mt-10 max-md:max-w-full">
+          <div
+            class="flex flex-col justify-center items-center self-center px-3 h-[98px] rounded-[70px] w-[98px]"
+          >
+            <div
+              class="flex justify-center items-center px-5 w-full border border-lime-400 border-solid h-[74px] rounded-[50px]"
+            >
+              <img
+                loading="lazy"
+                src="/static/imgs/4.svg"
+                class="aspect-square w-[34px]"
+              />
+            </div>
+          </div>
+          <div
+            class="mt-8 text-2xl leading-9 text-center text-white max-md:max-w-full"
+          >
+            Savings Accounts
+          </div>
+          <div
+            class="mt-5 text-lg font-light leading-7 text-center text-zinc-400 max-md:max-w-full"
+          >
+            Build your savings with our competitive interest rates and flexible
+            savings account options. Whether you're saving for a specific goal or
+            want to grow your wealth over time, we have the right account for you.
+          </div>
+        </div>
+      </div>
+      <div class="flex flex-col ml-5 w-[33%] max-md:ml-0 max-md:w-full">
+        <div class="flex flex-col grow max-md:mt-10 max-md:max-w-full">
+          <div
+            class="flex flex-col justify-center items-center self-center px-3 h-[98px] rounded-[70px] w-[98px]"
+          >
+            <div
+              class="flex justify-center items-center px-5 w-full border border-lime-400 border-solid h-[74px] rounded-[50px]"
+            >
+              <img
+                loading="lazy"
+                src="/static/imgs/5.svg"
+                class="aspect-square w-[34px]"
+              />
+            </div>
+          </div>
+          <div
+            class="mt-8 text-2xl leading-9 text-center text-white max-md:max-w-full"
+          >
+            Loans and Mortgages
+          </div>
+          <div
+            class="mt-5 text-lg font-light leading-7 text-center text-zinc-400 max-md:max-w-full"
+          >
+            Realize your dreams with our flexible loan and mortgage options. From
+            personal loans to home mortgages, our experienced loan officers are
+            here to guide you through the application process and help you secure
+            the funds you need.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+  class="flex flex-col items-center self-stretch px-16 pt-20 pb-12 mt-36 w-full bg-zinc-900 max-md:px-5 max-md:mt-10 max-md:max-w-full"
+>
+  <div class="flex flex-col mt-5 w-full max-w-[1596px] max-md:max-w-full">
+    <div
+      class="flex justify-center items-center px-16 text-lg leading-7 whitespace-nowrap text-zinc-200 max-md:px-5 max-md:max-w-full"
+    >
+      <div class="flex flex-col max-w-full w-[323px]">
+        <img
+          loading="lazy"
+          src="/static/imgs/6.svg"
+          class="self-center max-w-full aspect-[3.85] w-[156px]"
+        />
+        <div class="flex gap-5 justify-between mt-12 max-md:mt-10">
+          <div class="grow">Home</div>
+          <div>Careers</div>
+          <div>About</div>
+          <div class="grow">Security</div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="shrink-0 mt-12 h-px border border-solid bg-neutral-800 border-neutral-800 max-md:mt-10 max-md:max-w-full"
+    ></div>
+    <div
+      class="flex justify-center items-center px-16 mt-12 text-lg leading-7 whitespace-nowrap text-zinc-200 max-md:px-5 max-md:mt-10 max-md:max-w-full"
+    >
+      <div class="flex gap-5 max-md:flex-wrap">
+        <div class="flex gap-1.5 rounded-md">
+          <img
+            loading="lazy"
+            src="/static/imgs/7.svg"
+            class="shrink-0 my-auto w-6 aspect-square"
+          />
+          <div class="grow">hello@skillbirdge.com</div>
+        </div>
+        <div class="flex gap-1.5 rounded-md">
+          <img
+            loading="lazy"
+            src="/static/imgs/8.svg"
+            class="shrink-0 my-auto w-6 aspect-square"
+          />
+          <div class="grow">+91 91813 23 2309</div>
+        </div>
+        <div class="flex gap-1.5 rounded-md">
+          <img
+            loading="lazy"
+            src="/static/imgs/9.svg"
+            class="shrink-0 my-auto w-6 aspect-square"
+          />
+          <div class="grow">Somewhere in the World</div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="shrink-0 mt-12 h-px border border-solid bg-neutral-800 border-neutral-800 max-md:mt-10 max-md:max-w-full"
+    ></div>
+    <div
+      class="flex gap-5 justify-between items-center px-6 py-4 mt-12 w-full border border-solid bg-zinc-900 border-neutral-800 rounded-[100px] max-md:flex-wrap max-md:pr-5 max-md:mt-10 max-md:max-w-full"
+    >
+      <div class="flex gap-3.5 self-stretch">
+        <div
+          class="flex justify-center items-center px-3.5 bg-lime-400 h-[52px] rounded-[100px] w-[52px]"
+        >
+          <img
+            loading="lazy"
+            src="/static/imgs/10.svg"
+            class="w-6 aspect-square"
+          />
+        </div>
+        <div
+          class="flex justify-center items-center px-3.5 bg-lime-400 h-[52px] rounded-[100px] w-[52px]"
+        >
+          <img
+            loading="lazy"
+            src="/static/imgs/11.svg"
+            class="w-6 aspect-square"
+          />
+        </div>
+        <div
+          class="flex justify-center items-center px-3.5 bg-lime-400 h-[52px] rounded-[100px] w-[52px]"
+        >
+          <img
+            loading="lazy"
+            src="/static/imgs/12.svg"
+            class="w-6 aspect-square"
+          />
+        </div>
+      </div>
+      <div
+        class="flex-auto self-stretch my-auto text-lg font-light leading-7 text-zinc-400"
+      >
+        YourBank All Rights Reserved
+      </div>
+      <div
+        class="flex gap-5 justify-between self-stretch my-auto text-lg font-light leading-7 whitespace-nowrap text-zinc-400"
+      >
+        <div class="grow">Privacy Policy</div>
+        <div class="grow">Terms of Service</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

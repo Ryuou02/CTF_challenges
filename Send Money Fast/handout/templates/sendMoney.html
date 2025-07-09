@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Send Money - YourBank</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-black text-white">
+    <nav class="flex gap-5 justify-between items-center px-9 py-5 w-full text-lg leading-7 bg-zinc-900 border border-solid border-neutral-800 max-w-[1596px] rounded-[100px] max-md:flex-wrap max-md:px-5 max-md:max-w-full">
+        <img loading="lazy" src="static/imgs/0.svg" alt="Logo" class="shrink-0 self-stretch my-auto max-w-full aspect-[3.85] w-[156px]" />
+        <div class="flex gap-5 justify-between items-center self-stretch my-auto text-white whitespace-nowrap">
+            <a href="/" class="px-6 py-3 bg-neutral-800 rounded-[82px]">Home</a>
+            <a href="/careers">Careers</a>
+            <a href="/about">About</a>
+            <a href="/security">Security</a>
+        </div>
+        <a href="/logout"> <button class="px-8 py-3.5 bg-lime-400 rounded-[82px] text-zinc-900">Logout</button></a>
+    </nav>
+    {% if msg != "" %}
+      <script>alert(" {{msg}} ")</script>
+    {% endif %}
+    <div class="flex flex-col items-center mt-14 w-full max-w-[800px] mx-auto p-6 bg-zinc-900 border border-neutral-800 rounded-2xl">
+        <h1 class="text-3xl font-medium text-lime-400">Send Money</h1>
+        <p class="text-zinc-400 mt-2">Secure and fast money transfers. Currently in your account you have</p>
+        <p class="text-zinc-400 mt-2"> {{money}}<p>
+        
+        <form action="/send-money" method="POST" class="w-full mt-6">
+            <label class="block text-zinc-200 mb-2">Recipient's Name</label>
+            <input type="text" name="user" required class="w-full px-4 py-3 bg-neutral-800 border border-neutral-700 rounded-lg text-white">
+            
+            <label class="block text-zinc-200 mt-4 mb-2">Amount ($)</label>
+            <input type="number" name="money" step="0.01" required class="w-full px-4 py-3 bg-neutral-800 border border-neutral-700 rounded-lg text-white">
+            
+            <button type="submit" class="mt-6 w-full px-6 py-3 bg-lime-400 rounded-lg text-zinc-900 font-medium">Send Money</button>
+        </form>
+    </div>
+
+    <footer class="flex flex-col items-center mt-36 w-full bg-zinc-900 px-16 py-12 text-zinc-400">
+        <img loading="lazy" src="static/imgs/6.svg" class="w-32">
+        <p class="mt-6">YourBank All Rights Reserved</p>
+    </footer>
+</body>
+</html>

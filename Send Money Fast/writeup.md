@@ -1,0 +1,2 @@
+Login as `broke` and then get the session token. Use the session token as cookie and send post multiple requests(minimum 2) simultaneously (maybe using multiple threads) to send money (999 per request) to `useless_fellow`.
+Then, login as useless_fellow and you should have your flag in the front page.

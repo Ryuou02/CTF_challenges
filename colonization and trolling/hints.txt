@@ -1,0 +1,2 @@
+- the html page has the hints you'll need
+- the html page doesn't lie when it says that the videos don't contain hints but not all links are videos.(technically one video is the solution but forget about that)

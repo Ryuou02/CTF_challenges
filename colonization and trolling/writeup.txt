@@ -1,0 +1,4 @@
+you just need to make the server to fetch all the entries from the sql table.
+one very simple method is to put - 
+" or 1="1
+to display all the data in the sql server.

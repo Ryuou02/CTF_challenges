@@ -1,0 +1,32 @@
+header {
+    background-color: black;
+    padding: 1em;
+    color: white;
+    clear: left;
+    text-align: center;
+}
+
+p {
+    font-family: Roboto;
+    text-align: left;
+}
+button{
+    float: left;
+    padding: 14px 16px;
+    background-color: black;
+    color: white;
+    width: 50%
+    border: white;
+}
+button:hover {
+    background: grey;
+}
+
+.text {
+    text-align: right;
+    margin-top: 500px;
+    font-size: small;
+}
+
+
+/* CSS makes the page look nice, and yes, it also has part of the flag. Here's part 2: k3r_j0b_ */

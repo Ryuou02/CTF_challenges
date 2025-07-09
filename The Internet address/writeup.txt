@@ -1,0 +1,4 @@
+write the username as 'admin' and the password as 'IamTheADMIN!'
+then, if you have burpsuite, you can intercept the POST request sent to the server and add an extra header 
+X-Forwarded-For = 0.0.0.0
+or if you have firefox or other browsers, you just need to get that request and send it again with the above http header, then view the server response to get the flag

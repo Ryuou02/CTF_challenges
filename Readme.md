@@ -21,3 +21,4 @@ These are a set of CTF challenges, I made for various competitions hosted with m
 
 ## Note - 
 1. **Get The Credit Card!** is made such that each user has the feel of having an independant instance, even though all players have access to the same instance.
+2. In every challenge's directory, if there is a folder saying "handout", it means that you would have been given those files during the duration of the CTF. In case you don't see such a file, you would only be given the link to the challenge after it's hosted.

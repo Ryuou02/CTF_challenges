@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin Dashboard | YourBank</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-black text-white px-8 py-10">
+
+    <!-- Header with Title and Logout -->
+    <div class="flex justify-between items-center mb-6">
+        <h1 class="text-4xl font-bold text-lime-400">Welcome, Admin</h1>
+        <a href="/logout">
+            <button class="px-5 py-2 bg-red-500 hover:bg-red-400 text-white rounded-lg text-sm font-medium transition-colors">
+                Logout
+            </button>
+        </a>
+    </div>
+
+    <!-- User Table -->
+    <div class="overflow-x-auto bg-zinc-900 rounded-xl border border-neutral-800 shadow-lg mb-10">
+        <table class="min-w-full table-auto text-left">
+            <thead class="bg-neutral-800 text-zinc-300 uppercase text-sm">
+                <tr>
+                    <th class="px-6 py-3">ID</th>
+                    <th class="px-6 py-3">Username</th>
+                    <th class="px-6 py-3">Money</th>
+                </tr>
+            </thead>
+            <tbody class="divide-y divide-neutral-800">
+                {% for x in r %}
+                <tr class="hover:bg-neutral-800 transition-colors">
+                    <td class="px-6 py-4">{{ x[0] }}</td>
+                    <td class="px-6 py-4">{{ x[1] }}</td>
+                    <td class="px-6 py-4 text-lime-400 font-medium">${{ x[3] }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Form to Change Money -->
+    <h2 class="text-2xl font-semibold text-white mb-4">Change money for users:</h2>
+
+    <form method="POST" class="bg-zinc-900 border border-neutral-800 rounded-xl p-6 w-full max-w-md">
+        <div class="mb-4">
+            <label for="username" class="block text-sm font-medium text-zinc-300 mb-1">Username</label>
+            <input type="text" name="username" id="username" class="w-full px-4 py-2 bg-neutral-800 text-white rounded-lg border border-neutral-700 focus:outline-none focus:ring-2 focus:ring-lime-400">
+        </div>
+        <div class="mb-6">
+            <label for="money" class="block text-sm font-medium text-zinc-300 mb-1">Money</label>
+            <input type="text" name="money" id="money" class="w-full px-4 py-2 bg-neutral-800 text-white rounded-lg border border-neutral-700 focus:outline-none focus:ring-2 focus:ring-lime-400">
+        </div>
+        <button type="submit" class="px-6 py-2 bg-lime-400 text-black font-semibold rounded-lg hover:bg-lime-300 transition-colors w-full">
+            Submit
+        </button>
+    </form>
+
+</body>
+</html>

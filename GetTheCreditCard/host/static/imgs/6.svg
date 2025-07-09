@@ -1,0 +1,12 @@
+<svg width="156" height="41.00000000000001" xmlns="http://www.w3.org/2000/svg" fill="none">
+
+ <g>
+  <title>Layer 1</title>
+  <path id="svg_1" fill="#CAFF33" d="m10.0002,19.9999l10,-9.99998l10,9.99998l-10,10l-10,-10z"/>
+  <path id="svg_2" fill="#CAFF33" d="m36.6668,13.3333l-6.6666,6.6666l0,-9.99998l-10,0l6.6666,-6.66667l10,0l0,10.00005z"/>
+  <path id="svg_3" fill="#CAFF33" d="m36.6668,26.6666l-6.6666,-6.6667l0,10l-10,0l6.6666,6.6667l10,0l0,-10z"/>
+  <path id="svg_4" fill="#CAFF33" d="m3.3335,26.6666l6.6667,-6.6667l0,10l10,0l-6.6667,6.6667l-10,0l0,-10z"/>
+  <path id="svg_5" fill="#CAFF33" d="m3.3335,13.3333l6.6667,6.6666l0,-9.99998l10,0l-6.6667,-6.66667l-10,0l0,10.00005z"/>
+  <text stroke="#ffffff" transform="matrix(0.882789, 0, 0, 0.954567, 4.36426, 1.72643)" font-style="normal" xml:space="preserve" text-anchor="start" font-family="'Commissioner'" font-size="24" id="svg_15" y="29.58415" x="39.80126" fill="#000000">SquareBank</text>
+ </g>
+</svg>

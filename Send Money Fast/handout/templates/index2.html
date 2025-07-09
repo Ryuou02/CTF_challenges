@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YourBank</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-black text-white">
+    <nav class="flex gap-5 justify-between items-center px-9 py-5 w-full text-lg leading-7 bg-zinc-900 border border-solid border-neutral-800 max-w-[1596px] rounded-[100px] max-md:flex-wrap max-md:px-5 max-md:max-w-full">
+        <img loading="lazy" src="static/imgs/0.svg" alt="Logo" class="shrink-0 self-stretch my-auto max-w-full aspect-[3.85] w-[156px]" />
+        <div class="flex gap-5 justify-between items-center self-stretch my-auto text-white whitespace-nowrap">
+            <a href="/" class="px-6 py-3 bg-neutral-800 rounded-[82px]">Home</a>
+            <a href="/careers">Careers</a>
+            <a href="/about">About</a>
+            <a href="/security">Security</a>
+        </div>
+        {% if user == "": %}
+        <a href="/login"> <button class="px-8 py-3.5 bg-lime-400 rounded-[82px] text-zinc-900">Login</button></a>
+        {% else %}
+        <a href="/logout"> <button class="px-8 py-3.5 bg-lime-400 rounded-[82px] text-zinc-900">Logout</button></a>
+        {% endif %}
+    </nav>
+    
+    {% if user == "": %}
+    <header class="flex flex-col items-center text-center mt-14 w-full max-w-[1200px] mx-auto p-6">
+        <h1 class="text-5xl font-bold text-lime-400">Welcome to YourBank</h1>
+        <p class="text-zinc-400 mt-4 text-lg">Empowering your financial journey with secure and personalized banking solutions.</p>
+        <button class="mt-6 px-8 py-3.5 bg-lime-400 rounded-lg text-zinc-900 font-medium"><a href="/login">Get Started</a></button>
+    </header>
+    {% else %}
+    <header class="flex flex-col items-center text-center mt-14 w-full max-w-[1200px] mx-auto p-6">
+      <h1 class="text-5xl font-bold text-lime-400">Welcome back, {{user}} !</h1>
+      <p class="text-zinc-400 mt-4 text-lg">{{msg}}</p>
+      <button class="mt-6 px-8 py-3.5 bg-lime-400 rounded-lg text-zinc-900 font-medium"><a href="/send-money">Send money!</a></button>
+  </header>
+    {% endif %}
+    
+    <section class="flex flex-wrap justify-center gap-10 mt-14 w-full max-w-[1596px] mx-auto">
+        <div class="w-[300px] p-6 bg-zinc-900 border border-neutral-800 rounded-2xl text-center">
+            <img src="static/imgs/3.svg" class="w-16 mx-auto">
+            <h2 class="text-2xl text-white mt-4">Checking Accounts</h2>
+            <p class="text-zinc-400 mt-2">Easy access to your funds with online banking and debit cards.</p>
+        </div>
+        <div class="w-[300px] p-6 bg-zinc-900 border border-neutral-800 rounded-2xl text-center">
+            <img src="static/imgs/4.svg" class="w-16 mx-auto">
+            <h2 class="text-2xl text-white mt-4">Savings Accounts</h2>
+            <p class="text-zinc-400 mt-2">Grow your wealth with competitive interest rates and flexible options.</p>
+        </div>
+        <div class="w-[300px] p-6 bg-zinc-900 border border-neutral-800 rounded-2xl text-center">
+            <img src="static/imgs/5.svg" class="w-16 mx-auto">
+            <h2 class="text-2xl text-white mt-4">Loans & Mortgages</h2>
+            <p class="text-zinc-400 mt-2">Get funding for your needs with flexible loan options.</p>
+        </div>
+    </section>
+    
+    <footer class="flex flex-col items-center mt-36 w-full bg-zinc-900 px-16 py-12 text-zinc-400">
+        <img loading="lazy" src="static/imgs/6.svg" class="w-32">
+        <p class="mt-6">YourBank All Rights Reserved</p>
+    </footer>
+</body>
+</html>

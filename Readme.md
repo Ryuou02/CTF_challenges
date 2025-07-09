@@ -2,19 +2,19 @@
 These are a set of CTF challenges, I made for various competitions hosted with my team, bi0sblr!
 
 # Easy challenges
-1. Autoclick
-2. Colonization and Trolling
-3. Scavenger Hunt
-4. The Internet Address
+1. Autoclick  [script writing]
+2. Colonization and Trolling  [web, sqli]
+3. Scavenger Hunt  [web]
+4. The Internet Address  [web]
 
 # Medium Difficulty
-1. Yourbank1
-2. FilterBypass
-3. Send Money Fast
-4. Get The Credit Card!
+1. Yourbank1 [web]
+2. FilterBypass [web, code injection]
+3. Send Money Fast [web]
+4. Get The Credit Card! [web + forensics + OSINT]
 
 # Unsolved/rarely solved
-1. BankSQLI
+1. BankSQLI [web]
 
 
 **If you are familiar with docker, you can directly download the images from [here](https://hub.docker.com/u/ryuou02)**

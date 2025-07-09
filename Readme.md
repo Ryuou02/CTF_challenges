@@ -17,4 +17,4 @@ These are a set of CTF challenges, I made for various competitions hosted with m
 1. BankSQLI
 
 
-**If you are familiar with docker, you can directly download the images from here - [https://hub.docker.com/repositories/ryuou02](https://hub.docker.com/u/ryuou02)**
+**If you are familiar with docker, you can directly download the images from [here](https://hub.docker.com/u/ryuou02)**

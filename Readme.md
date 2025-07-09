@@ -11,7 +11,7 @@ These are a set of CTF challenges, I made for various competitions hosted with m
 1. Yourbank1
 2. FilterBypass
 3. Send Money Fast
-4. SquareBank
+4. Get The Credit Card!
 
 # Unsolved/rarely solved
 1. BankSQLI
